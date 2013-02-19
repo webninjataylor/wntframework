@@ -16,5 +16,7 @@ def sync():
 def deploy():
     code_dir = '/home6/webninj1/public_html/wntframework/'
 
+    sync()
+
     with cd(code_dir):
         run("git pull")
