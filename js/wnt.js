@@ -13,10 +13,10 @@ _gaq.push(['_trackPageview']);
 
 
 /******** LOCK WINDOW ********/
-var wnt;
+var wnt = {};
 function BlockMove(event) {
     /* Prevents elasticity for window as a whole unit when viewed on mobile */
-    if(wnt.mobile == true){
+    if(wnt.mobile === true){
         event.preventDefault();
     }
 }
@@ -24,26 +24,27 @@ function BlockMove(event) {
 
 /******** HIGHLIGHT CURRENT MENU ITEM ********/
 /******** Modified 1/8/2013 to use data-path attribute for accurate matching regardless of subdomain pointings. ********/
+/******** Modified 2/19/2013 to use href if no data-path attribute exists. ********/
 var currentPage = document.location.pathname;
 var defaultTab = 'yes';
-for(i=0; i < $('menu').children('li').length; i++){
-    var currentMenuItem = $('menu').children('li').eq(i);
+for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
+    var currentMenuItem = $('menu').children('li').eq(wnt.i);
     // Is it a top-level menu item?...
-    if(currentMenuItem.children('a').attr('data-path') == currentPage){
+    if((currentMenuItem.children('a').attr('data-path') === currentPage)||(currentMenuItem.children('a').attr('href') === currentPage)){
         currentMenuItem.addClass('active');
         defaultTab = 'no';
     // ...or a second-level menu item?
     } else {
-        for(j=0; j < currentMenuItem.find('li').length; j++){
-            if(currentMenuItem.find('li').eq(j).find('a').attr('data-path') == currentPage){
+        for(wnt.j=0; wnt.j < currentMenuItem.find('li').length; wnt.j++){
+            if((currentMenuItem.find('li').eq(wnt.j).find('a').attr('data-path') === currentPage)||(currentMenuItem.find('li').eq(wnt.j).find('a').attr('href') === currentPage)){
                 currentMenuItem.addClass('active');
-                currentMenuItem.find('li').eq(j).addClass('active');
+                currentMenuItem.find('li').eq(wnt.j).addClass('active');
                 defaultTab = 'no';
             }
         }
     }
 }
-if(defaultTab == 'yes') {
+if(defaultTab === 'yes') {
     $('menu').children('li:first').addClass('active');
 }
 
@@ -54,16 +55,16 @@ function generateRows(data){
     var row = '';
     var sold = data.indexOf('Sold!');
     $.each(data, function(cell){
-        if(sold != -1){
+        if(sold !== -1){
             row += '<td class="sold">'+data[cell]+'</td>';
         } else {
             row += '<td>'+data[cell]+'</td>';
-        };
+        }
         
     });
     return row;
 }
-if($('#prices').length != 0){   //If the pricing table exists...
+if($('#prices').length !== 0){   //If the pricing table exists...
     $.getJSON('prices.json', function(data) {   //Load JSON, which is an array of arrays.
         $.each(data, function(row){   //Treat each array in the data as a row in the table.
             $('#prices tbody').append('<tr>'+generateRows(data[row])+'</tr>');
@@ -80,7 +81,7 @@ if($('#prices').length != 0){   //If the pricing table exists...
             }]
         });*/
     });
-};
+}
 
 
 /******** TOOL-TIP POP-UPS ********/
@@ -103,9 +104,9 @@ xyz.com?pab=TOOLTIP
 $.urlParam = function(name){
     var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
     return results[1] || 0;
-}
+};
 // IF URL has parameters, use them to find the peek-a-boo target
-if(window.location.search != ""){
+if(window.location.search !== ""){
     $('div.peekaboo').hide();
     $('div#'+$.urlParam('pab')).show();
 }
