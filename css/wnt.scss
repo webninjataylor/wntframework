@@ -1,0 +1,99 @@
+/**********************************/
+/******** WEB NINJA TAYLOR ********/
+/**********************************/
+/**********************/
+/******** MAIN ********/
+/**********************/
+body {
+    border:1px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(136, 136, 136, .5);
+    margin: 10px auto;
+    position: relative;
+    width: 984px;
+}
+/************************/
+/******** HEADER ********/
+/************************/
+header {
+    position: relative;
+}
+#logo {
+    float: left;
+}
+/**********************/
+/******** MENU ********/
+/**********************/
+menu {
+    border-bottom:1px solid #000000;
+    border-top:1px solid #000000;
+    clear: both;
+    font-size: 1em;
+    list-style: none;
+    margin-top: 0;
+    overflow: hidden;
+    padding: 0;
+    background-color: #555555;
+}
+menu li {
+    float: left;
+    border-right:1px solid #000000;
+}
+menu li a, menu li a:visited {
+    color: #ffffff;
+    display: block;
+    font-size: 14px;
+    padding: 5px 9px;
+}
+menu li a:hover, menu li.active a {
+    color: #ffffff;
+    background-color: #000000;
+}
+/*************************/
+/******** CONTENT ********/
+/*************************/
+a, a:visited {
+    color: #375774;
+    font-weight: bold;
+}
+a:hover {
+    color: #fcac00;
+    font-weight: bold;
+}
+article {
+    background-color: #ffffff;
+    overflow: hidden;
+    padding: 10px 40px;
+}
+/************************/
+/******** FOOTER ********/
+/************************/
+footer {
+    background-color: #ffffff;
+    font-size: .8em;
+    padding: 10px;
+    text-align: center;
+}
+/***********************************/
+/******** RESPONSIVE DESIGN ********/
+/***********************************/
+/* iPad Portrait View */
+/* NOTE: The default layout is optimized for iPad landscape, so it's not declared here. */
+/* NOTE: The min-width to max-width is for the sake of a fluidly resized window on a laptop or desktop browser. */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {   /* Scrollbar makes it 1008 instead of 1023 */
+    body {
+        width: 728px;
+    }
+}
+/* iPhone Landscape View */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        width: 440px;
+    }
+}
+/* iPhone Portrait View */
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        width: 280px;
+    }
+}
