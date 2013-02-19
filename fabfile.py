@@ -6,8 +6,11 @@ from fabric.contrib.console import confirm
 env.hosts = ['webninj1@webninjataylor.com']
 
 
-def prepare_deploy():
+def sync():
     local("git status")
+    local("git add .")
+    local("git commit")
+    local("git push origin")
 
 
 def deploy():
