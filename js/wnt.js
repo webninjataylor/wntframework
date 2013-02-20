@@ -23,20 +23,18 @@ function BlockMove(event) {
 
 
 /******** HIGHLIGHT CURRENT MENU ITEM ********/
-/******** Modified 1/8/2013 to use data-path attribute for accurate matching regardless of subdomain pointings. ********/
-/******** Modified 2/19/2013 to use href if no data-path attribute exists. ********/
 var currentPage = document.location.pathname;
 var defaultTab = 'yes';
 for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
     var currentMenuItem = $('menu').children('li').eq(wnt.i);
     // Is it a top-level menu item?...
-    if((currentMenuItem.children('a').attr('data-path') === currentPage)||(currentMenuItem.children('a').attr('href') === currentPage)){
+    if(currentPage.indexOf(currentMenuItem.children('a').attr('href')) !== -1){
         currentMenuItem.addClass('active');
         defaultTab = 'no';
     // ...or a second-level menu item?
     } else {
         for(wnt.j=0; wnt.j < currentMenuItem.find('li').length; wnt.j++){
-            if((currentMenuItem.find('li').eq(wnt.j).find('a').attr('data-path') === currentPage)||(currentMenuItem.find('li').eq(wnt.j).find('a').attr('href') === currentPage)){
+            if(currentPage.indexOf(currentMenuItem.find('li').eq(wnt.j).find('a').attr('href')) !== -1){
                 currentMenuItem.addClass('active');
                 currentMenuItem.find('li').eq(wnt.j).addClass('active');
                 defaultTab = 'no';
