@@ -43,7 +43,12 @@ for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
     }
 }
 if(defaultTab === 'yes') {
-    $('menu').children('li:first').addClass('active');
+    for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
+        currentMenuItem = $('menu').children('li').eq(wnt.i);
+        if(currentMenuItem.children('a').attr('href').indexOf('index') !== -1){
+            currentMenuItem.addClass('active');
+        }
+    }
 }
 
 
