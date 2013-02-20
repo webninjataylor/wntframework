@@ -114,14 +114,13 @@ xyz.com?pab=TOOLTIP
 <a href="#" data-id="TOOLTIP" class="peekaboo">[LINK]</a>
 <div id="TOOLTIP" class="peekaboo">[CONTENT]</div>
 ***/
-
-// Get all parameters from the end of the URL
-$.urlParam = function(name){
-    var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
-    return results[1] || 0;
-};
 // IF URL has parameters, use them to find the peek-a-boo target
 if(window.location.search !== ""){
+    // Get all parameters from the end of the URL
+    $.urlParam = function(name){
+        var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results[1] || 0;
+    };
     $('div.peekaboo').hide();
     $('div#'+$.urlParam('pab')).show();
 }
