@@ -1,11 +1,6 @@
 @import "reset.scss";
 
-$yellow: #fde400;
-$orange: #f2ab1e;
-$yellow_light: #fef8bf;
-$blackish: #222222;
-$blue_grey: #d8dff2;
-$dark_grey: #333333;
+$bg_main: #f2ab1e;
 
 body {
     background: url('../images/watermark4.gif') repeat; /*../OLD/images/watermark.gif*/
@@ -81,13 +76,13 @@ menu li a:visited {
     width: 100px;
 }
 menu li:hover {
-    background-color: $orange;
+    background-color: $bg_main;
 }
 menu li:hover a {
     color: rgba(34,34,34,1);
 }
 menu li.active {
-    background-color: $orange;
+    background-color: $bg_main;
 }
 menu li.active a {
     color: rgba(34,34,34,1);
@@ -102,7 +97,7 @@ menu li.active ul {
     display: block;
 }
 menu li:hover ul {
-    background-color: $orange;
+    background-color: $bg_main;
     left: 131px;
     position: absolute;
     top: 0;
