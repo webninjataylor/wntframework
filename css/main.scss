@@ -1,0 +1,235 @@
+@import "reset.scss";
+
+$yellow: #fde400;
+$orange: #f2ab1e;
+$yellow_light: #fef8bf;
+$blackish: #222222;
+$blue_grey: #d8dff2;
+$dark_grey: #333333;
+
+body {
+    background: url('../images/watermark4.gif') repeat; /*../OLD/images/watermark.gif*/
+    border: 1px solid rgba(0,0,0,1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 5px rgba(136, 136, 136, .5);
+    margin: 10px auto;
+    position: relative;
+    width: 960px;
+}
+/************************/
+/******** HEADER ********/
+/************************/
+header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #333333;
+    border-radius: 10px 10px 0 0;
+    color: #ffffff;
+    margin: 0;
+    position: relative;
+}
+header img#logo {
+    background-color: #ffffff;
+    border-radius: 10px 0 0 0;
+    padding: 10px;
+    width: 300px;
+}
+header img.banner {
+    border-radius: 10px;
+    margin-left: 9px;
+    width: 120px;
+}
+/**********************/
+/******** MENU ********/
+/**********************/
+menu {
+    background-color: #333333;
+    border-right: 1px rgba(0,0,0,1) solid;
+    color: rgba(34,34,34,1);
+    float: left;
+    font-family: sans-serif;
+    font-size: .9em;
+    font-weight: bold;
+    height: 100%;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /*position: absolute;*/   /* Removal makes page height adjust, while inclusion gives solid grey the whole length */
+    /*text-transform: uppercase;*/
+    width: 130px;
+
+    background: rgb(125,126,125); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+menu li {
+    border-bottom: 1px rgba(0,0,0,1) solid;
+    overflow: visible;
+    position: relative;
+}
+menu li a,
+menu li a:visited {
+    color: #ffffff;
+    display: block;
+    padding: 5px;
+    width: 100px;
+}
+menu li:hover {
+    background-color: $orange;
+}
+menu li:hover a {
+    color: rgba(34,34,34,1);
+}
+menu li.active {
+    background-color: $orange;
+}
+menu li.active a {
+    color: rgba(34,34,34,1);
+}
+menu li ul {
+    display: none;
+    list-style: none;
+    z-index: 100;
+}
+menu li:hover ul,
+menu li.active ul {
+    display: block;
+}
+menu li:hover ul {
+    background-color: $orange;
+    left: 131px;
+    position: absolute;
+    top: 0;
+}
+menu li.active:hover ul {
+    left: 0;
+    position: relative;
+    top: 0;
+}
+menu li ul li {
+    border-bottom: none;
+}
+menu li ul li a {
+    font-size: .8em;
+    padding-left: 20px;
+}
+/*************************/
+/******** CONTENT ********/
+/*************************/
+h1 {
+    border-bottom: 1px solid #cccccc;
+    font-family: sans-serif;
+    font-size: 1.3em;
+    margin-top: 0;
+    text-align: left;
+    text-transform: uppercase;
+}
+h2 {
+    border-bottom: 1px solid #cccccc;
+    font-size: 1em;
+}
+h3 {
+    font-size: 1em;
+}
+article {
+    float: right;
+    line-height: 1.5;
+    /*min-height: 610px;*/
+    padding: 30px 61px 30px 30px;
+    text-align: justify;
+    width: 730px;
+}
+article p,
+article li {
+    font-family: sans-serif;
+    font-size: .9em;
+}
+article ul {
+    margin-left: 30px;
+}
+article ul li {
+    background: url('../images/bullet2.gif') no-repeat 0 3px;
+    list-style-type: none;
+    padding-left: 20px;
+}
+a.social-media {
+    background:transparent url(../images/social-media-icons.png) 0 0 no-repeat;
+    display: block;
+    height: 20px;
+    padding: 3px 10px 0 25px;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+a.li {background-position:0 -194px;}   /* li = LinkedIn */
+/************************/
+/******** FOOTER ********/
+/************************/
+footer {
+    background-color: #333333;
+    border-radius: 0 0 10px 10px;
+    border-top: 1px solid #fff;
+    clear: both;
+    color: #ffffff;
+    font-size: .9em;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+
+    background: rgb(125,126,125); /* Old browsers */
+    background: -moz-linear-gradient(45deg,  rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+    background: linear-gradient(45deg,  rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.copyright {
+    font-size: .7em;
+}
+footer a, footer a:visited {
+    color: #ffffff;
+}
+footer a:hover {
+    color: #661a03;
+}
+/* ----- CLEAR FIX ----- */
+.clear:after, .clrfix:after, section:after, menu:after, article:after {
+    clear:both;height:0;
+    content:" ";
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+/***************************************************************************************************/
+/**************************************** RESPONSIVE DESIGN ****************************************/
+/***************************************************************************************************/
+/* iPad Portrait View */
+/* NOTE: The default layout is optimized for iPad landscape, so it's not declared here. */
+/* NOTE: The min-width to max-width is for the sake of a fluidly resized window on a laptop or desktop browser. */
+@media only screen and (min-width: 753px) and (max-width: 1008px) {  /* Scrollbar makes it 1008 instead of 1023 */
+    body {
+        width: 720px;
+    }
+}
+/* iPhone Landscape View */
+@media only screen and (min-width: 465px) and (max-width: 752px) {
+    body {
+        width: 480px;
+    }
+}
+/* iPhone Portrait View */
+@media only screen and (min-width: 320px) and (max-width: 464px) {
+    body {
+        width: 320px;
+    }
+}
