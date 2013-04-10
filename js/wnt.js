@@ -1,4 +1,5 @@
 /******** GOOGLE ANALYTICS ********/
+/******** REQUIRES: a unique ID on line 2 ********/
 /*
 var _gaq = _gaq || [];
 _gaq.push(['_setAccount', 'UA-31306164-2']);
@@ -65,7 +66,7 @@ if(defaultTab === 'yes') {
 
 
 /******** POPULATE TABLE WITH JSON DATA ********/
-/******** NOTE: Requires a table with id="prices" and prices.json ********/
+/******** REQUIRES: a table with id="prices" and prices.json ********/
 /* INDEXOF SHIV FOR IE8 */
 if(!Array.prototype.indexOf){
     Array.prototype.indexOf = function(elt /*, from*/){
@@ -92,7 +93,6 @@ function generateRows(data){
         } else {
             row += '<td>'+data[cell]+'</td>';
         }
-        
     });
     return row;
 }
@@ -126,6 +126,7 @@ $('.showtip').hover(
 
 
 /******** CONTENT PEEK-A-BOO W/URL PARAMETER SUPPORT ********/
+/******** REQUIRES: link and div with matching data-id/id and peekaboo class ********/
 /*** NOTE:
 xyz.com?pab=TOOLTIP
 <a href="#" data-id="TOOLTIP" class="peekaboo">[LINK]</a>
@@ -145,3 +146,42 @@ $('a.peekaboo').click(function(){
     $('div.peekaboo').hide();
     $('div#'+$(this).attr('data-id')).show();
 });
+
+
+
+/******** IMAGE FADE-SWAP ********/
+/******** REQUIRES: div#cycler with images and following css rules ********/
+/*
+<div id="cycler">
+    <img class="active" src="images/header1.jpg">
+    <img src="images/header2.jpg">     
+</div>
+#cycler {
+    float: right;
+    height: 110px;
+    width: 535px;
+}
+#cycler img {
+    position: absolute;
+    z-index: 1;
+}
+#cycler img.active {
+    z-index: 3;
+}
+*/
+/*
+function cycleImages(){
+    var $active = $('#cycler .active');
+    var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
+    $next.css('z-index',2);//move the next image up the pile
+    $active.fadeOut(1500,function(){//fade out the top image
+        $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+        $next.css('z-index',3).addClass('active');//make the next image the top one
+    });
+}
+
+$(document).ready(function(){
+    // run every 3s
+    setInterval('cycleImages()', 3000);
+});
+*/
