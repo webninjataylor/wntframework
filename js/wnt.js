@@ -133,7 +133,7 @@ xyz.com?pab=TOOLTIP
 <div id="TOOLTIP" class="peekaboo">[CONTENT]</div>
 ***/
 // IF URL has parameters, use them to find the peek-a-boo target
-if(window.location.search !== ""){
+if(window.location.search.indexOf('pab') !== -1){
     // Get all parameters from the end of the URL
     $.urlParam = function(name){
         var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
