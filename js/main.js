@@ -14,6 +14,5 @@ _gaq.push(['_trackPageview']);
 */
 
 
-/******** UNPAID ACCOUNT ********/
-//wnt.dueBy = new Date(2013,2,22);   // Make sure to subtract one from the zero-based month
-//wnt.lockdown();
+/******** SITE LOCKDOWN ********/
+//wnt.lockdown(new Date(2013,4,22));   // Make sure to subtract one from the zero-based month

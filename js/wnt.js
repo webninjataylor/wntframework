@@ -1,7 +1,8 @@
 /******** FEATURE LIST ********/
     /*
         Namespace = wnt
-        Menu highlighting
+        Menu highlighting (automatic)
+        Site lockdown (wnt.lockdown(new Date(2013,4,22))) ... Make sure to subtract one from the zero-based month
     */
 
 
@@ -41,15 +42,14 @@ var wnt = {};
         }
     }
 
-    /******** UNPAID ACCOUNT ********/
+    /******** SITE LOCKDOWN ********/
     wnt.currentDate = new Date();
     wnt.currentDate.setHours(0,0,0,0);
-    wnt.dueBy;   // new Date(2013,2,22) Make sure to subtract one from the zero-based month
-    wnt.lockdown = function(){
-        if((wnt.currentDate > wnt.dueBy) && (wnt.currentPage.indexOf('404') === -1)){
+    wnt.lockdown = function(dueBy){
+        if((wnt.currentDate > dueBy) && (wnt.currentPage.indexOf('404') === -1)){
             document.location = "404.shtml";
         }
-    }
+    };
 
 }());
 
