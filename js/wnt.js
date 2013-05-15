@@ -25,14 +25,10 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
 */
 (function(){
     var wnt = {};
-    alert(Modernizr.touch);
+    // Stop touch devices' browser windows from scrolling elastically beyond the page
     if(Modernizr.touch === true){
-        $('body').attr('ontouchmove','event.preventDefault(); alert("test");');
+        $('body').attr('ontouchmove','event.preventDefault();');
     }
-    wnt.blockmove = function(event){
-        event.preventDefault();
-        alert('BLOCKED worked');
-    };
 }());
 
 
