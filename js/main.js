@@ -14,5 +14,15 @@ _gaq.push(['_trackPageview']);
 */
 
 
+
 /******** SITE LOCKDOWN ********/
 //wnt.lockdown(new Date(2013,4,22));   // Make sure to subtract one from the zero-based month
+
+
+
+/******** TOOL-TIP POP-UPS ********/
+/*
+    <span class="tooltiptest" data-id="tip1">Tool-tip Test</span>
+    <div id="tip1" class="tooltip" style="display:none;">I am the hidden tip</div>
+*/
+wnt.tooltip('.tooltiptest');   // Pass in element(s) which have tips (data-id needs to match id of hidden tip)

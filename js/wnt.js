@@ -3,10 +3,8 @@
         Namespace = wnt
         Menu highlighting (automatic)
         Site lockdown (wnt.lockdown(new Date(2013,4,22))) ... Make sure to subtract one from the zero-based month
+        Tooltip Popups (wnt.tooltip(ELEMENTs))
     */
-
-
-
 
 // Create accessible namespace
 var wnt = {};
@@ -51,7 +49,23 @@ var wnt = {};
         }
     };
 
+    /******** TOOL-TIP POP-UPS ********/
+    wnt.tooltip = function(elements){
+        $(elements).hover(function(){
+                wnt.tip = $(this).attr('data-id');
+                $('#'+wnt.tip).toggle();
+            }
+        );
+    };
+
 }());
+
+
+
+
+
+
+
 
 
 
@@ -105,15 +119,6 @@ if($('#prices').length !== 0){   //If the pricing table exists...
         });*/
     });
 }
-
-
-/******** TOOL-TIP POP-UPS ********/
-$('.showtip').hover(
-    function(){
-        var tip = $(this).attr('data-id');
-        $('#'+tip).toggle();
-    }
-);
 
 
 /******** CONTENT PEEK-A-BOO W/URL PARAMETER SUPPORT ********/

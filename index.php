@@ -34,6 +34,8 @@
             <li><a href="">xxx</a></li>
             <li><a href="">xxx</a></li>
         </ul>
+        <span class="tooltiptest" data-id="tip1">Tool-tip Test</span>
+        <div id="tip1" class="tooltip" style="display:none;">I am the hidden tip</div>
     </section>
     <?php include('includes/footer.php'); ?>
 </body>
