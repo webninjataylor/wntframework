@@ -24,9 +24,10 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
 }
 */
 (function(){
+    alert("HELLO?");
     var wnt = {};
     if(Modernizr.touch === true){
-        $('body').attr('ontouchmove','wnt.blockmove(event);')
+        $('body').attr('ontouchmove','wnt.blockmove(event);');
     }
     wnt.blockmove = function(event){
         event.preventDefault();
@@ -34,15 +35,6 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
     };
 }());
 
-
-/******** LOCK WINDOW ********/
-var wnt = {};
-function BlockMove(event) {
-    /* Prevents elasticity for window as a whole unit when viewed on mobile */
-    if(wnt.mobile === true){
-        event.preventDefault();
-    }
-}
 
 
 /******** HIGHLIGHT CURRENT MENU ITEM ********/

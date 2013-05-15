@@ -20,16 +20,24 @@ module.exports = function(grunt) {
         },
         // JS files to be concatenated … (source and destination files)
         concat: {
-            dist: {
-                src: ['js/jquery-1.9.0.min.js', 'js/modernizr.min.js', 'js/underscore.min.js', 'js/wnt.js', 'js/main.js'],
+            libs: {
+                src: ['js/jquery-1.9.0.min.js', 'js/modernizr.min.js', 'js/underscore.min.js'],
+                dest: 'js/libs.min.js'
+            },
+            app: {
+                src: ['js/wnt.js', 'js/main.js'],
                 dest: 'js/main.min.js'
             }
         },
         // … and minified (source and destination files)
         uglify: {
-            dist: {
-                src: '<%= concat.dist.dest %>',
-                dest: '<%= concat.dist.dest %>'
+            libs: {
+                src: '<%= concat.libs.dest %>',
+                dest: '<%= concat.libs.dest %>'
+            },
+            app: {
+                src: '<%= concat.app.dest %>',
+                dest: '<%= concat.app.dest %>'
             }
         },
         // Tasks being executed with 'grunt watch'
@@ -37,7 +45,7 @@ module.exports = function(grunt) {
             files: [
                 "css/main.scss", "js/wnt.js", "js/main.js"
             ],
-            tasks: "default"
+            tasks: "develop"
         }
     });
 
@@ -52,6 +60,7 @@ module.exports = function(grunt) {
 
     // TASKS
     grunt.registerTask('default', ['sass', 'concat', 'uglify']);
+    grunt.registerTask('develop', ['sass', 'concat:app', 'uglify:app']);
     grunt.registerTask('js', ['concat', 'uglify']);
 
 };
