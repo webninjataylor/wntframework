@@ -24,8 +24,8 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
 }
 */
 (function(){
-    alert("HELLO?");
     var wnt = {};
+    alert(Modernizr.touch);
     if(Modernizr.touch === true){
         $('body').attr('ontouchmove','wnt.blockmove(event);');
     }
@@ -36,6 +36,7 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
 }());
 
 
+var wnt = {};
 
 /******** HIGHLIGHT CURRENT MENU ITEM ********/
 var currentPage = document.location.pathname;
