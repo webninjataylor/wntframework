@@ -1,14 +1,17 @@
-/******** UNPAID ACCOUNT ********/
-/*
-var currentDate = new Date();
-currentDate.setHours(0,0,0,0);
-var dueBy = new Date(2013,2,22);   // Make sure to subtract one from the zero-based month
-if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
-    document.location = "404.shtml";
-}
-*/
+/******** FEATURE LIST ********/
+    /*
+        Namespace = wnt
+        Menu highlighting
+    */
+
+
+
+
+// Create accessible namespace
+var wnt = {};
+
 (function(){
-    var wnt = {};
+
     /******** HIGHLIGHT CURRENT MENU ITEM ********/
     wnt.currentPage = document.location.pathname;
     wnt.defaultTab = 'yes';
@@ -37,6 +40,17 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
             }
         }
     }
+
+    /******** UNPAID ACCOUNT ********/
+    wnt.currentDate = new Date();
+    wnt.currentDate.setHours(0,0,0,0);
+    wnt.dueBy;   // new Date(2013,2,22) Make sure to subtract one from the zero-based month
+    wnt.lockdown = function(){
+        if((wnt.currentDate > wnt.dueBy) && (wnt.currentPage.indexOf('404') === -1)){
+            document.location = "404.shtml";
+        }
+    }
+
 }());
 
 
