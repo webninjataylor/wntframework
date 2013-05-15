@@ -1,19 +1,3 @@
-/******** GOOGLE ANALYTICS ********/
-/******** REQUIRES: a unique ID on line 2 ********/
-/*
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-31306164-2']);
-_gaq.push(['_trackPageview']);
-
-(function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-*/
-
-
-
 /******** UNPAID ACCOUNT ********/
 /*
 var currentDate = new Date();
@@ -25,43 +9,37 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
 */
 (function(){
     var wnt = {};
-    // Stop touch devices' browser windows from scrolling elastically beyond the page
-    if(Modernizr.touch === true){
-        $('body').attr('ontouchmove','event.preventDefault();');
+    /******** HIGHLIGHT CURRENT MENU ITEM ********/
+    wnt.currentPage = document.location.pathname;
+    wnt.defaultTab = 'yes';
+    for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
+        var currentMenuItem = $('menu').children('li').eq(wnt.i);
+        // Is it a top-level menu item?...
+        if(wnt.currentPage.indexOf(currentMenuItem.children('a').attr('href')) !== -1){
+            currentMenuItem.addClass('active');
+            wnt.defaultTab = 'no';
+        // ...or a second-level menu item?
+        } else {
+            for(wnt.j=0; wnt.j < currentMenuItem.find('li').length; wnt.j++){
+                if(wnt.currentPage.indexOf(currentMenuItem.find('li').eq(wnt.j).find('a').attr('href')) !== -1){
+                    currentMenuItem.addClass('active');
+                    currentMenuItem.find('li').eq(wnt.j).addClass('active');
+                    wnt.defaultTab = 'no';
+                }
+            }
+        }
+    }
+    if(wnt.defaultTab === 'yes') {
+        for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
+            currentMenuItem = $('menu').children('li').eq(wnt.i);
+            if(currentMenuItem.children('a').attr('href').indexOf('index') !== -1){
+                currentMenuItem.addClass('active');
+            }
+        }
     }
 }());
 
 
-var wnt = {};
-
-/******** HIGHLIGHT CURRENT MENU ITEM ********/
-var currentPage = document.location.pathname;
-var defaultTab = 'yes';
-for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
-    var currentMenuItem = $('menu').children('li').eq(wnt.i);
-    // Is it a top-level menu item?...
-    if(currentPage.indexOf(currentMenuItem.children('a').attr('href')) !== -1){
-        currentMenuItem.addClass('active');
-        defaultTab = 'no';
-    // ...or a second-level menu item?
-    } else {
-        for(wnt.j=0; wnt.j < currentMenuItem.find('li').length; wnt.j++){
-            if(currentPage.indexOf(currentMenuItem.find('li').eq(wnt.j).find('a').attr('href')) !== -1){
-                currentMenuItem.addClass('active');
-                currentMenuItem.find('li').eq(wnt.j).addClass('active');
-                defaultTab = 'no';
-            }
-        }
-    }
-}
-if(defaultTab === 'yes') {
-    for(wnt.i=0; wnt.i < $('menu').children('li').length; wnt.i++){
-        currentMenuItem = $('menu').children('li').eq(wnt.i);
-        if(currentMenuItem.children('a').attr('href').indexOf('index') !== -1){
-            currentMenuItem.addClass('active');
-        }
-    }
-}
 
 
 /******** POPULATE TABLE WITH JSON DATA ********/
