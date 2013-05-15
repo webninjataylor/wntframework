@@ -45,7 +45,7 @@ module.exports = function(grunt) {
             files: [
                 "css/main.scss", "js/wnt.js", "js/main.js"
             ],
-            tasks: "develop"
+            tasks: "default"
         }
     });
 
@@ -59,8 +59,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
 
     // TASKS
-    grunt.registerTask('default', ['sass', 'concat', 'uglify']);
-    grunt.registerTask('develop', ['sass', 'concat:app', 'uglify:app']);
+    grunt.registerTask('default', ['sass', 'concat:app', 'uglify:app']);
+    grunt.registerTask('full', ['sass', 'concat', 'uglify']);
     grunt.registerTask('js', ['concat', 'uglify']);
 
 };

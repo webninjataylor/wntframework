@@ -27,7 +27,7 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
     var wnt = {};
     alert(Modernizr.touch);
     if(Modernizr.touch === true){
-        $('body').attr('ontouchmove','wnt.blockmove(event);');
+        $('body').attr('ontouchmove','event.preventDefault(); alert("test");');
     }
     wnt.blockmove = function(event){
         event.preventDefault();
