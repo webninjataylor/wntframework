@@ -8,9 +8,33 @@
 <body>
     <?php include('includes/header.php'); ?>
     <?php include('includes/menu.php'); ?>
-    <article>
-        This website template is mobile-friendly. It's using a responsive design to be flexible enough for handling iPhone portrait and landscape views as well as iPad portrait and landscape views.
-    </article>
+    <section class="left-rail">
+        <aside class="feature">
+            <h3>CSS</h3>
+            <p>reset, main</p>
+        </aside>
+        <aside class="feature">
+            <h3>JavaScript</h3>
+            <p>jQuery, Modernizr, Underscore, WNT, main</p>
+        </aside>
+        <aside class="feature">
+            <h3>Images</h3>
+            <p>logo, social-media-icons</p>
+        </aside>
+        <aside class="feature">
+            <h3>Project Tools</h3>
+            <p>Fabric, Grunt</p>
+        </aside>
+    </section>
+    <section class="main-content">
+        <p>This project is a framework, intended as a launching point for building a website from scratch.</p>
+        <h3>Layouts</h3>
+        <ul class="bullets">
+            <li><a href="">Three-column with top menu</a></li>
+            <li><a href="">xxx</a></li>
+            <li><a href="">xxx</a></li>
+        </ul>
+    </section>
     <?php include('includes/footer.php'); ?>
 </body>
 </html>

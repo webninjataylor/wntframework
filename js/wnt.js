@@ -23,6 +23,16 @@ if((currentDate > dueBy) && (currentPage.indexOf('404') === -1)){
     document.location = "404.shtml";
 }
 */
+(function(){
+    var wnt = {};
+    if(Modernizr.touch === true){
+        $('body').attr('ontouchmove','wnt.blockmove(event);')
+    }
+    wnt.blockmove = function(event){
+        event.preventDefault();
+        alert('BLOCKED worked');
+    };
+}());
 
 
 /******** LOCK WINDOW ********/

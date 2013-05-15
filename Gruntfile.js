@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/main.css': ['css/reset.scss', 'css/wnt.scss', 'css/main.scss']
+                    'css/main.min.css': ['css/reset.scss', 'css/main.scss']
                 }
             }
         },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         // JS files to be concatenated … (source and destination files)
         concat: {
             dist: {
-                src: ['js/jquery-1.9.0.min.js', 'js/modernizr.min.js', 'js/wnt.js', 'js/main.js'],
+                src: ['js/jquery-1.9.0.min.js', 'js/modernizr.min.js', 'js/underscore.min.js', 'js/wnt.js', 'js/main.js'],
                 dest: 'js/main.min.js'
             }
         },
@@ -35,9 +35,9 @@ module.exports = function(grunt) {
         // Tasks being executed with 'grunt watch'
         watch: {
             files: [
-                "*.scss"
+                "css/main.scss", "js/wnt.js", "js/main.js"
             ],
-            tasks: "sass"
+            tasks: "default"
         }
     });
 

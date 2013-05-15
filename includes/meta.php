@@ -10,4 +10,4 @@
 <meta property="og:image" content="IMAGE_URL" />
 <meta property="og:site_name" content="SITE_NAME" />
 <!-- CSS and Initial JS -->
-<link rel="stylesheet" href="css/main.css"><!-- reset.css gets concatenated and minified automatically -->
+<link rel="stylesheet" href="css/main.min.css"><!-- reset.css gets concatenated and minified automatically -->
