@@ -91,6 +91,20 @@ article {
     overflow: hidden;
     padding: 10px 40px;
 }
+#cycler {
+    height: 400px;
+    width: 600px;
+}
+#cycler img {
+    position: absolute;
+    z-index: 1;   /* No need to adjust */
+}
+#cycler img.active {
+    z-index: 3;   /* No need to adjust */
+}
+.tooltip, .layered-content {
+    display: none;
+}
 /************************/
 /******** FOOTER ********/
 /************************/

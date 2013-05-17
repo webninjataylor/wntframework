@@ -21,8 +21,19 @@ _gaq.push(['_trackPageview']);
 
 
 /******** TOOL-TIP POP-UPS ********/
-/*
-    <span class="tooltiptest" data-id="tip1">Tool-tip Test</span>
-    <div id="tip1" class="tooltip" style="display:none;">I am the hidden tip</div>
-*/
 wnt.tooltip('.tooltiptest');   // Pass in element(s) which have tips (data-id needs to match id of hidden tip)
+
+
+
+/******** IMAGE FADE-SWAP ********/
+wnt.imageCycler('#cycler');   // Pass ID of image cycler
+
+
+
+/******** POPULATE TABLE WITH JSON DATA ********/
+wnt.fillTable('#prices','sample.json');   // Pass ID of table and path to JSON
+
+
+
+/******** SHOW DEFAULT CONTENT LAYER w/URL PARAM SUPPORT ********/
+wnt.defaultContentLayer();
