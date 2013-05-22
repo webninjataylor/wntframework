@@ -4,7 +4,7 @@
             Menu highlighting
         Manual functionality:
             wnt.lockdown(new Date(2013,4,22))) = Site lockdown ... Subtract one from the zero-based month
-            wnt.tooltip(ELEMENTs) = Tooltip popups
+            wnt.tooltip(ELEMENTs) = Tooltip popups (requires Modernizr)
             wnt.imageCycler(ELEMENT) = Image fade cycler
             wnt.fillTable(ELEMENT,JSON) = Populate table with JSON data
             wnt.defaultContentLayer() = Show default content layer
@@ -69,11 +69,18 @@ var wnt = {};
         wnt.tooltip('.tooltiptest');
     */
     wnt.tooltip = function(elements){
-        $(elements).hover(function(){
+        // If mobile
+        if(Modernizr.touch){
+           $(elements).click(function(){
                 wnt.tip = $(this).attr('data-id');
                 $('#'+wnt.tip).toggle();
-            }
-        );
+            });
+        } else {
+           $(elements).hover(function(){
+                wnt.tip = $(this).attr('data-id');
+                $('#'+wnt.tip).toggle();
+            });
+        }
     };
 
     /******** IMAGE FADE-SWAP ********/

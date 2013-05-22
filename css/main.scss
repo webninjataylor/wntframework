@@ -102,6 +102,9 @@ article {
 #cycler img.active {
     z-index: 3;   /* No need to adjust */
 }
+.tooltiptest {
+    cursor: pointer;
+}
 .tooltip, .layered-content {
     display: none;
 }
