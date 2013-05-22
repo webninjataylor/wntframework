@@ -8,6 +8,7 @@
             wnt.imageCycler(ELEMENT) = Image fade cycler
             wnt.fillTable(ELEMENT,JSON) = Populate table with JSON data
             wnt.defaultContentLayer() = Show default content layer
+            wnt.easyphone('#phone') = Make phone form field easy to populate
     */
 
 // Create accessible namespace
@@ -214,6 +215,32 @@ var wnt = {};
             $('.layered-content').hide();
             $('#'+$(this).attr('data-id')).show();
             return false;
+        });
+    };
+
+    /******** EASY PHONE FORM FIELD ********/
+    /* USAGE EXAMPLE (phoneField is any DOM identifier for the phone's input field):
+        ...
+        wnt.easyphone('#phone');
+    */
+    wnt.easyphone = function(phoneField){
+        var defaultValue = '(   )    -    ';
+        var maxLength = 14;
+        $(phoneField).attr('maxlength',maxLength);
+        $(phoneField).focus(function(){
+            var currentValue = $(this).val();
+            if((currentValue === defaultValue) || (currentValue === '')){
+                $(this).val('(');
+            }
+        });
+        $(phoneField).keyup(function(){
+            var currentValue = $(this).val();
+            if(currentValue.length === 4){
+                $(this).val(currentValue+') ');
+            }
+            if(currentValue.length === 9){
+                $(this).val(currentValue+'-');
+            }
         });
     };
 

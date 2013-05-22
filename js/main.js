@@ -31,9 +31,15 @@ wnt.imageCycler('#cycler');   // Pass ID of image cycler
 
 
 /******** POPULATE TABLE WITH JSON DATA ********/
-wnt.fillTable('#prices','sample.json');   // Pass ID of table and path to JSON
+// Add conditional to keep JSON data from loading on every page request
+wnt.fillTable('#prices','/wntframework/json/sample.json');   // Pass ID of table and path to JSON
 
 
 
 /******** SHOW DEFAULT CONTENT LAYER w/URL PARAM SUPPORT ********/
 wnt.defaultContentLayer();
+
+
+
+/******** EASY PHONE FORM FIELD ********/
+wnt.easyphone('#phone');   // Pass ID of phone field
