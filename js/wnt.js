@@ -233,7 +233,7 @@ var wnt = {};
     wnt.easyphone = function(phoneField){
         var defaultValue = '(   )    -    ';
         var maxLength = 14;
-        $(phoneField).attr('maxlength',maxLength);
+        $(phoneField).attr('maxlength',maxLength).attr('value',defaultValue);
         $(phoneField).focus(function(){
             var currentValue = $(this).val();
             if((currentValue === defaultValue) || (currentValue === '')){

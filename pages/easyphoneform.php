@@ -13,7 +13,7 @@
         <h1>Easy Phone Form</h1>
         <form id="easyphone">
             <label>Phone:</label>
-            <input type="text" name="phone" id="phone" value="(   )    -    ">
+            <input type="text" name="phone" id="phone">
         </form>
     </section>
     <?php include('../includes/footer.php'); ?>
