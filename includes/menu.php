@@ -1,5 +1,6 @@
 <menu>
     <li><a href="/wntframework/index.php">Home</a></li>
+    <li><a href="/wntframework/pages/bootstrap.php">Bootstrap</a></li>
     <li><a href="/wntframework/pages/contentdefault.php">Content Default</a></li>
     <li><a href="/wntframework/pages/tooltips.php">Tool Tips</a></li>
     <li><a href="/wntframework/pages/easyphoneform.php">Easy Phone Form</a></li>

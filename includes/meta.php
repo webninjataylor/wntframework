@@ -14,3 +14,8 @@
 <meta property="og:site_name" content="SITE_NAME" />
 <!-- CSS and Initial JS -->
 <link rel="stylesheet" href="/wntframework/css/main.min.css"><!-- reset.css gets concatenated and minified automatically -->
+<link href="http://fonts.googleapis.com/css?family=Quando" rel="stylesheet" type="text/css">
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->

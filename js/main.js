@@ -43,3 +43,9 @@ wnt.defaultContentLayer();
 
 /******** EASY PHONE FORM FIELD ********/
 wnt.easyphone('#phone');   // Pass ID of phone field
+
+
+
+/******** BOOTSTRAP ********/
+$('#myCarousel').carousel();
+$('#example').popover();

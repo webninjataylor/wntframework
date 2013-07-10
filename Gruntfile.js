@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/main.min.css': ['css/reset.scss', 'css/main.scss']
+                    'css/main.min.css': ['css/reset.scss', 'css/bootstrap.min.css', 'css/bootstrap-responsive.min.css', 'css/main.scss']
                 }
             }
         },
@@ -21,12 +21,12 @@ module.exports = function(grunt) {
         // JS files to be concatenated … (source and destination files)
         concat: {
             libs: {
-                src: ['js/jquery-1.9.0.min.js', 'js/modernizr.min.js', 'js/underscore.min.js'],
+                src: ['js/jquery-1.9.0.min.js', 'js/modernizr.min.js', 'js/underscore.min.js', 'js/bootstrap.min.js'],
                 dest: 'js/libs.min.js'
             },
             app: {
                 src: ['js/wnt.js', 'js/main.js'],
-                dest: 'js/main.min.js'
+                dest: 'js/app.min.js'
             }
         },
         // … and minified (source and destination files)
