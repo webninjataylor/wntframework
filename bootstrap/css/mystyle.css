@@ -1,0 +1,227 @@
+body {
+color: #5a5a5a;
+background-color:#fff;
+}
+.brand, h1, h2{
+	font-family: 'Quando', serif;
+}
+.myImg{
+	width: 35px;
+	height: auto;
+}
+a {color: #f5850c;}
+a:hover {color: #960;}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+color: #fff;
+background-color: #f5850c;
+}
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+color: #ffffff;
+text-decoration: none;
+background-color: #f5850c;
+background-image: none;
+background-image: none;
+background-image: none;
+background-image: none;
+background-image: none;
+background-image: none;
+background-repeat: no-repeat;
+filter: none;}
+.navbar-wrapper {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+z-index: 10;
+padding-top: 20px;
+margin-bottom: -90px; 
+background-color: #FFF;
+}
+.navbar .navbar-inner {
+border: 0;
+background-color: #ffffff;
+background-image: none;
+background-image: none;
+background-image: none;
+background-image: none;
+background-image: none;
+background-image: none;
+background-repeat: no-repeat;
+filter: none;
+  -webkit-box-shadow: none;
+	 -moz-box-shadow: none;
+		  box-shadow: none;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+color: #f5850c;
+text-decoration: none;
+background-color: #ffffff;
+-webkit-box-shadow: none;
+ -moz-box-shadow: none;
+	  box-shadow: none;
+}
+
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+  padding: 15px 20px;
+}
+
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+  margin-top: 10px;
+}
+
+/* Carousel base class */
+.carousel{
+	margin-bottom: 0;
+}
+.carousel .item {
+  height: 550px;
+}
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
+.carousel-control {
+  margin-top: 60px; 
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 40px;
+  margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+/* 3 points
+-------------------------------------------------- */
+.hilite-wrapper{
+background-image: url(../img/drop.png), url(../img/diamond_upholstery.png);
+background-position: left top, left top;
+background-repeat: repeat-x, repeat;
+padding: 50px 10px 80px 10px;
+border-top-width: 1px;
+border-top-style: solid;
+border-top-color: #ccc;
+}
+.hilite h2 {
+  font-weight: normal;
+  text-align: center;
+}
+.hilite img{
+	display: block;
+	margin: 0 auto;
+}
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 50px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+  padding-top: 50px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (max-width: 979px) {
+  .carousel .item {
+	height: 500px;
+  }
+  .carousel img {
+	top: 100px;
+	width: auto;
+  }
+  .carousel-caption {
+	padding: 0 70px;
+  }
+  .container.navbar-wrapper {
+	margin-bottom: 0;
+	width: auto;
+  }
+  .navbar-inner {
+	border-radius: 0;
+	margin: 0 0;
+  }
+  .featurette {
+	height: auto;
+	padding: 0;
+  }
+  .featurette-image.pull-left,
+  .featurette-image.pull-right {
+	display: block;
+	float: none;
+	max-width: 40%;
+	margin: 20px auto;
+  }
+}
+@media (max-width: 767px) {
+.carousel {
+	margin-left: -20px;
+	margin-right: -20px;
+  } 
+  .carousel .item {
+	height: 300px;
+  }
+  .carousel img {
+	width: auto;
+  }
+    .carousel-caption {
+	width: 65%;
+	margin-top: 120px;
+  }
+  .carousel-caption h1 {
+	font-size: 25px;
+  }
+  .carousel-caption .lead {
+	display: none;  
+  }
+  .hilite-wrapper{
+	margin-left: -20px;
+	margin-right: -20px;
+   }
+   .hilite .span4 + .span4 {
+	margin-top: 40px;
+  }
+.featurette-heading {
+	font-size: 25px;
+  }
+}
