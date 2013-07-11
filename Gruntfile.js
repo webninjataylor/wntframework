@@ -9,7 +9,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/main.min.css': ['css/reset.scss', 'css/bootstrap.min.css', 'css/bootstrap-responsive.min.css', 'css/main.scss']
+                    'css/main.min.css': ['css/bootstrap.css', 'css/bootstrap-responsive.css', 'css/main.scss']
                 }
             }
         },

@@ -8,15 +8,19 @@
 <body>
     <?php include('../includes/header.php'); ?>
     <?php include('../includes/menu.php'); ?>
-    <?php include('../includes/leftrail.php'); ?>
-    <section class="main-content">
-        <h1>Image Cycler</h1>
-        <div id="cycler">
-            <img src="/wntframework/images/water.jpg" alt="Water">
-            <img src="/wntframework/images/sand.jpg" alt="Sand">
-            <img src="/wntframework/images/tree.jpg" alt="Tree">
+    <div class="container">
+        <div class="row">
+            <?php include('../includes/leftrail.php'); ?>
+            <section class="span10">
+                <h1>Image Cycler</h1>
+                <div id="cycler">
+                    <img src="/wntframework/images/water.jpg" alt="Water">
+                    <img src="/wntframework/images/sand.jpg" alt="Sand">
+                    <img src="/wntframework/images/tree.jpg" alt="Tree">
+                </div>
+            </section>
         </div>
-    </section>
+    </div>
     <?php include('../includes/footer.php'); ?>
 </body>
 </html>

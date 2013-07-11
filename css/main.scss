@@ -1,8 +1,9 @@
 $lightest: rgb(255,255,255);   /* RGBA doesn't work in IE8- */
 $darkest: rgb(0,0,0);
+$base-text: rgb(90,90,90);
 $menu-bg: rgb(85,85,85);
-$link: rgb(0,182,229);
-$link-active: rgb(255,175,61);
+$link: rgb(245,133,12);
+$link-hover: rgb(0,9,96);
 
 /**********************************/
 /******** WEB NINJA TAYLOR ********/
@@ -12,9 +13,19 @@ $link-active: rgb(255,175,61);
 /**********************/
 body {
     box-sizing: border-box;
+    color: $base-text;
     padding: 20px;
     position: relative;
     width: 100%;
+}
+.brand, h1, h2 {
+    font-family: 'Quando', serif;
+}
+a, a:visited {
+    color: $link;
+}
+a:hover {
+    color: $link-hover;
 }
 /************************/
 /******** HEADER ********/
@@ -28,63 +39,76 @@ header {
 /**********************/
 /******** MENU ********/
 /**********************/
-menu {
-    border-bottom:1px solid $darkest;
-    border-top:1px solid $darkest;
-    clear: both;
-    font-size: 1em;
-    list-style: none;
-    margin-top: 0;
-    overflow: hidden;
-    padding: 0;
-    background-color: $menu_bg;
+.navbar .nav li.dropdown.open > .dropdown-toggle,
+.navbar .nav li.dropdown.active > .dropdown-toggle,
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+    color: #fff;
+    background-color: #f5850c;
 }
-menu li {
-    float: left;
-    border-right:1px solid $darkest;
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus,
+.dropdown-submenu:hover > a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #f5850c;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
 }
-menu li a, menu li a:visited {
-    color: $lightest;
-    display: block;
-    font-size: 14px;
-    padding: 5px 9px;
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-top: 20px;
+    margin-bottom: -90px; 
+    background-color: #FFF;
 }
-menu li a:hover, menu li.active a {
-    color: $lightest;
-    background-color: $darkest;
+.navbar .navbar-inner {
+    border: 0;
+    background-color: #ffffff;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-image: none;
+    background-repeat: no-repeat;
+    filter: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+    color: #f5850c;
+    text-decoration: none;
+    background-color: #ffffff;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+    padding: 15px 20px;
+}
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+    margin-top: 10px;
 }
 /*************************/
 /******** CONTENT ********/
 /*************************/
-.main-content {
-    border:1px solid $darkest;
-    box-sizing: border-box;
-    float: right;
-    padding: 20px;
-    width: 70%;
-}
-.left-rail {
-    box-sizing: border-box;
-    float: left;
-    width: 30%;
-}
-.feature {
-    border:1px solid $darkest;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    padding: 20px;
-}
 .bullets {
     margin: 10px 0 10px 10px;
     padding-left: 40px;
-}
-a, a:visited {
-    color: $link;
-    font-weight: bold;
-}
-a:hover {
-    color: $link-active;
-    font-weight: bold;
 }
 article {
     background-color: $lightest;
@@ -108,273 +132,89 @@ article {
 .tooltip, .layered-content {
     display: none;
 }
+.featurette-divider {
+    margin: 50px 0; /* Space out the Bootstrap <hr> more */
+}
+.featurette {
+    padding-top: 50px; /* Vertically center images part 1: add padding above and below text. */
+    overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+    margin-right: 40px;
+}
+.featurette-image.pull-right {
+    margin-left: 40px;
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
 /************************/
 /******** FOOTER ********/
 /************************/
-/*footer {
-    background-color: $lightest;
-    font-size: .8em;
-    padding: 10px;
-    text-align: center;
-}*/
+footer {
+    margin-top: 20px;
+}
 /***********************************/
 /******** RESPONSIVE DESIGN ********/
 /***********************************/
-/* iPad Portrait View */
-/* NOTE: The default layout is optimized for iPad landscape, so it's not declared here. */
-/* NOTE: The min-width to max-width is for the sake of a fluidly resized window on a laptop or desktop browser. */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {   /* Scrollbar makes it 1008 instead of 1023 */
-    body {
-        width: 728px;
-    }
-}
-/* iPhone Landscape View */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    body {
-        width: 440px;
-    }
-}
-/* iPhone Portrait View */
-@media only screen and (min-width: 320px) and (max-width: 479px) {
-    body {
-        width: 280px;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-/******** BOOTSTRAP ********/
-body {
-color: #5a5a5a;
-background-color:#fff;
-}
-.brand, h1, h2{
-    font-family: 'Quando', serif;
-}
-.myImg{
-    width: 35px;
-    height: auto;
-}
-a {color: #f5850c;}
-a:hover {color: #960;}
-
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
-.navbar .nav li.dropdown.open > .dropdown-toggle,
-.navbar .nav li.dropdown.active > .dropdown-toggle,
-.navbar .nav li.dropdown.open.active > .dropdown-toggle {
-color: #fff;
-background-color: #f5850c;
-}
-.dropdown-menu li > a:hover,
-.dropdown-menu li > a:focus,
-.dropdown-submenu:hover > a {
-color: #ffffff;
-text-decoration: none;
-background-color: #f5850c;
-background-image: none;
-background-image: none;
-background-image: none;
-background-image: none;
-background-image: none;
-background-image: none;
-background-repeat: no-repeat;
-filter: none;}
-.navbar-wrapper {
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-z-index: 10;
-padding-top: 20px;
-margin-bottom: -90px; 
-background-color: #FFF;
-}
-.navbar .navbar-inner {
-border: 0;
-background-color: #ffffff;
-background-image: none;
-background-image: none;
-background-image: none;
-background-image: none;
-background-image: none;
-background-image: none;
-background-repeat: no-repeat;
-filter: none;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-}
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-color: #f5850c;
-text-decoration: none;
-background-color: #ffffff;
--webkit-box-shadow: none;
- -moz-box-shadow: none;
-      box-shadow: none;
-}
-
-/* Navbar links: increase padding for taller navbar */
-.navbar .nav > li > a {
-  padding: 15px 20px;
-}
-
-/* Offset the responsive button for proper vertical alignment */
-.navbar .btn-navbar {
-  margin-top: 10px;
-}
-
-/* Carousel base class */
-.carousel{
-    margin-bottom: 0;
-}
-.carousel .item {
-  height: 550px;
-}
-.carousel .container {
-  position: relative;
-  z-index: 9;
-}
-.carousel-control {
-  margin-top: 60px; 
-}
-.carousel img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-}
-
-.carousel-caption {
-  background-color: transparent;
-  position: static;
-  max-width: 550px;
-  padding: 0 40px;
-  margin-top: 200px;
-}
-.carousel-caption h1,
-.carousel-caption .lead {
-  margin: 0;
-  line-height: 1.25;
-  color: #fff;
-  text-shadow: 0 1px 1px rgba(0,0,0,.4);
-}
-/* 3 points
--------------------------------------------------- */
-.hilite-wrapper{
-background-image: url(../images/drop.png), url(../images/diamond_upholstery.png);
-background-position: left top, left top;
-background-repeat: repeat-x, repeat;
-padding: 50px 10px 80px 10px;
-border-top-width: 1px;
-border-top-style: solid;
-border-top-color: #ccc;
-}
-.hilite h2 {
-  font-weight: normal;
-  text-align: center;
-}
-.hilite img{
-    display: block;
-    margin: 0 auto;
-}
-/* Featurettes
-------------------------- */
-.featurette-divider {
-  margin: 50px 0; /* Space out the Bootstrap <hr> more */
-}
-.featurette {
-  padding-top: 50px; /* Vertically center images part 1: add padding above and below text. */
-  overflow: hidden; /* Vertically center images part 2: clear their floats. */
-}
-
-/* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-image.pull-left {
-  margin-right: 40px;
-}
-.featurette-image.pull-right {
-  margin-left: 40px;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-  font-size: 32px;
-  font-weight: 300;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-/* RESPONSIVE CSS
--------------------------------------------------- */
 @media (max-width: 979px) {
-  .carousel .item {
-    height: 500px;
-  }
-  .carousel img {
-    top: 100px;
-    width: auto;
-  }
-  .carousel-caption {
-    padding: 0 70px;
-  }
-  .container.navbar-wrapper {
-    margin-bottom: 0;
-    width: auto;
-  }
-  .navbar-inner {
-    border-radius: 0;
-    margin: 0 0;
-  }
-  .featurette {
-    height: auto;
-    padding: 0;
-  }
-  .featurette-image.pull-left,
-  .featurette-image.pull-right {
-    display: block;
-    float: none;
-    max-width: 40%;
-    margin: 20px auto;
-  }
+    .carousel .item {
+        height: 500px;
+    }
+    .carousel img {
+        top: 100px;
+        width: auto;
+    }
+    .carousel-caption {
+        padding: 0 70px;
+    }
+    .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+    }
+    .navbar-inner {
+        border-radius: 0;
+        margin: 0 0;
+    }
+    .featurette {
+        height: auto;
+        padding: 0;
+    }
+    .featurette-image.pull-left,
+    .featurette-image.pull-right {
+        display: block;
+        float: none;
+        margin: 20px auto;
+        max-width: 40%;
+    }
 }
 @media (max-width: 767px) {
-.carousel {
-    margin-left: -20px;
-    margin-right: -20px;
-  } 
-  .carousel .item {
-    height: 300px;
-  }
-  .carousel img {
-    width: auto;
-  }
+    .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+    } 
+    .carousel .item {
+        height: 300px;
+    }
+    .carousel img {
+        width: auto;
+    }
     .carousel-caption {
-    width: 65%;
-    margin-top: 120px;
-  }
-  .carousel-caption h1 {
-    font-size: 25px;
-  }
-  .carousel-caption .lead {
-    display: none;  
-  }
-  .hilite-wrapper{
-    margin-left: -20px;
-    margin-right: -20px;
-   }
-   .hilite .span4 + .span4 {
-    margin-top: 40px;
-  }
-.featurette-heading {
-    font-size: 25px;
-  }
+        margin-top: 120px;
+        width: 65%;
+    }
+    .carousel-caption h1 {
+        font-size: 25px;
+    }
+    .carousel-caption .lead {
+        display: none;  
+    }
+    .featurette-heading {
+        font-size: 25px;
+    }
 }
