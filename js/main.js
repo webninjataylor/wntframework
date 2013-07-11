@@ -20,11 +20,6 @@ _gaq.push(['_trackPageview']);
 
 
 
-/******** TOOL-TIP POP-UPS ********/
-wnt.tooltip('.tooltiptest');   // Pass in element(s) which have tips (data-id needs to match id of hidden tip)
-
-
-
 /******** IMAGE FADE-SWAP ********/
 wnt.imageCycler('#cycler');   // Pass ID of image cycler
 

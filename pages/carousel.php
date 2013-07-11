@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap</title>
+    <title>Carousel</title>
     <?php include('../includes/meta.php'); ?>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <?php include('../includes/leftrail.php'); ?>
-            <section class="span10">
+            <section class="span9">
                 <!-- CAROUSEL -->
                 <div id="myCarousel" class="carousel slide">
                     <div class="carousel-inner">

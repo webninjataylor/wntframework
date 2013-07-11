@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <?php include('../includes/leftrail.php'); ?>
-            <section class="span10">
+            <section class="span9">
                 <h1>Easy Phone Form</h1>
                 <form id="easyphone">
                     <label>Phone:</label>

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <?php include('../includes/leftrail.php'); ?>
-            <section class="span10">
+            <section class="span9">
                 <h1>Image Cycler</h1>
                 <div id="cycler">
                     <img src="/wntframework/images/water.jpg" alt="Water">

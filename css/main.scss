@@ -36,6 +36,13 @@ header {
 #logo {
     float: left;
 }
+.search {
+    float: right;
+    width: 300px;
+}
+.gsc-input {
+    background-image: none !important;
+}
 /**********************/
 /******** MENU ********/
 /**********************/
@@ -152,6 +159,10 @@ article {
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
+}
+.h3-icon {
+    position: relative;
+    top: 6px;
 }
 /************************/
 /******** FOOTER ********/

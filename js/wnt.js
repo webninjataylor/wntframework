@@ -4,7 +4,6 @@
             Menu highlighting
         Manual functionality:
             wnt.lockdown(new Date(2013,4,22))) = Site lockdown ... Subtract one from the zero-based month
-            wnt.tooltip(ELEMENTs) = Tooltip popups (requires Modernizr)
             wnt.imageCycler(ELEMENT) = Image fade cycler
             wnt.fillTable(ELEMENT,JSON) = Populate table with JSON data
             wnt.defaultContentLayer() = Show default content layer
@@ -56,30 +55,6 @@ var wnt = {};
     wnt.lockdown = function(dueBy){
         if((wnt.currentDate > dueBy) && (wnt.currentPage.indexOf('404') === -1)){
             document.location = "404.shtml";
-        }
-    };
-
-    /******** TOOL-TIP POP-UPS ********/
-    /* USAGE EXAMPLE (classes are whatever you want, but data-id must match id of tip):
-        ...
-        <span class="tooltiptest" data-id="tip1">Tool-tip Test</span>
-        <div id="tip1" class="tooltip" style="display:none;">I am the hidden tip</div>
-        ...
-        // Pass in element(s) which have tips (data-id needs to match id of hidden tip)
-        wnt.tooltip('.tooltiptest');
-    */
-    wnt.tooltip = function(elements){
-        // If mobile
-        if(Modernizr.touch){
-           $(elements).click(function(){
-                wnt.tip = $(this).attr('data-id');
-                $('#'+wnt.tip).toggle();
-            });
-        } else {
-           $(elements).hover(function(){
-                wnt.tip = $(this).attr('data-id');
-                $('#'+wnt.tip).toggle();
-            });
         }
     };
 

@@ -4,21 +4,28 @@ WNT Framework
 Base framework, intended as a launching point for building a website from scratch.
 
 # CSS
-* reset
-* main
+* bootstrap.css
+* bootstrap-responsive.css
+* main.scss
 
 # JavaScript
-* jQuery
-* Modernizr
-* Underscore
-* WNT
-* main
+* jquery-1.9.0.min.js
+* modernizr.min.js
+* underscore.min.js
+* bootstrap.min.js
+* wnt.js
+* main.js
 
 # Images
-* logo
-* social-media-icons
+* glyphicons-halflings.png
+* glyphicons-halflings-white.png
+* logo.png
+* social-media-icons.png
 
-![](/images/logo.png "logo")
+![](/images/glyphicons-halflings.png)
+![](/images/glyphicons-halflings-white.png)
+![](/images/logo.png)
+![](/images/social-media-icons.png)
 
 # Project Tools
 * Fabric

@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <?php include('../includes/leftrail.php'); ?>
-            <section class="span10">
+            <section class="span9">
                 <h1>JSON Table</h1>
                 <p>NOTE: Need to stop JSON from loading on every page.</p>
                 <table id="prices" class="table">

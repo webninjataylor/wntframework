@@ -11,7 +11,7 @@
     <div class="container">
         <div class="row">
             <?php include('includes/leftrail.php'); ?>
-            <section class="span10">
+            <section class="span9">
                 <p>This project is a framework, intended as a launching point for building a website from scratch.</p>
                 <h2>Bootstrap</h2>
                 <ul>

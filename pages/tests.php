@@ -12,7 +12,7 @@
     <div class="container">
         <div class="row">
             <?php include('../includes/leftrail.php'); ?>
-            <section class="span10">
+            <section class="span9">
                 <h1>JS Unit Tests</h1>
                 <div id="qunit"></div>
                 <div id="qunit-fixture"></div>
