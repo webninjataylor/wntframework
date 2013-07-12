@@ -2,11 +2,11 @@
     <aside class="well">
         <h3><span class="icon-pencil h3-icon"></span> CSS</h3>
         <ul>
-            <li><strong>main.min.css</strong>
+            <li><strong>main.min.css (124KB)</strong>
                 <ul>
-                    <li>bootstrap.css</li>
-                    <li>bootstrap-responsive.css</li>
-                    <li>main.scss</li>
+                    <li>bootstrap.css (124KB)</li>
+                    <li>bootstrap-responsive.css (22KB)</li>
+                    <li>main.scss (5KB)</li>
                 </ul>
             </li>
         </ul>
@@ -14,20 +14,27 @@
     <aside class="well">
         <h3><span class="icon-book h3-icon"></span> JavaScript</h3>
         <ul>
-            <li><strong>libs.min.js</strong>
+            <li><strong>libs.min.js (148KB)</strong>
                 <ul>
-                    <li>jquery-1.9.0.min.js</li>
-                    <li>modernizr.min.js</li>
-                    <li>underscore.min.js</li>
-                    <li>bootstrap.min.js</li>
+                    <li>jquery-1.9.0.min.js (93KB)</li>
+                    <li>modernizr.min.js (16KB)</li>
+                    <li>underscore.min.js (13KB)</li>
+                    <li>bootstrap.min.js (32KB)</li>
                 </ul>
             </li>
-            <li><strong>app.min.js</strong>
+            <li><strong>app.min.js (3KB)</strong>
                 <ul>
-                    <li>wnt.js</li>
-                    <li>main.js</li>
+                    <li>wnt.js (9KB)</li>
+                    <li>main.js (1KB)</li>
                 </ul>
             </li>
+        </ul>
+        <h4>Optional</h4>
+        <ul>
+            <li>jquery.dataTables.min.js (71KB)</li>
+            <li>jquery.mobile-1.2.0.min.js (113KB)</li>
+            <li>jquery.validate.min.js (21KB)</li>
+            <li>mousetrap.min.js (4KB)</li>
         </ul>
     </aside>
     <aside class="well">
@@ -54,6 +61,9 @@
         <ul>
             <li>Fabric</li>
             <li>Grunt</li>
+            <li>qunit-1.11.0.js</li>
+            <li>qunit-1.11.0.css</li>
+            <li>tests.js</li>
         </ul>
     </aside>
 </section>
