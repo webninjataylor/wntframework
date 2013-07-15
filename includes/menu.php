@@ -9,6 +9,7 @@
         <li><a href="/wntframework/pages/carousel.php">Carousel</a></li>
         <li><a href="/wntframework/pages/contentdefault.php">Content Default</a></li>
         <li><a href="/wntframework/pages/easyphoneform.php">Easy Phone Form</a></li>
+        <li><a href="/wntframework/pages/formvalidation.php">Form Validation</a></li>
         <li><a href="/wntframework/pages/imagecycler.php">Image Cycler</a></li>
         <li><a href="/wntframework/pages/jsontable.php">JSON Table</a></li>
         <li><a href="/wntframework/pages/mousetrap.php">Mousetrap</a></li>
