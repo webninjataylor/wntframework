@@ -9,7 +9,7 @@ env.hosts = ['webninj1@webninjataylor.com']
 
 
 def sync():
-    local("grunt full")
+    local("grunt")
     local("git add .")
     local("git commit")
     local("git push origin")

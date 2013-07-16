@@ -40,8 +40,15 @@ header {
     float: right;
     width: 300px;
 }
-.gsc-input {
+input[type="text"].gsc-input {
     background-image: none !important;
+    box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+    transition: none;
+        -moz-transition: none;
+        -o-transition: none;
+        -webkit-transition: none;                    
 }
 /**********************/
 /******** MENU ********/
