@@ -1,0 +1,281 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<title>Widget</title>
+<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<style>
+h3 {
+width:300px;
+}
+    #freequote {
+        counter-reset: fieldsets;
+    }
+    #freequote fieldset {
+        background-color: #ccc;
+        border-radius: 10px;
+box-sizing: border-box;
+        margin: 0 0 10px 0;
+        padding: 10px;
+        width: 280px;
+    }
+    #freequote fieldset:nth-child(3n+4) {
+        clear: left;
+    }
+    #freequote legend {
+        font-size: 1em;
+        font-weight: bold;
+    }
+    #freequote ol {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    form#freequote > fieldset > legend:before {
+        content: "Step " counter(fieldsets) ": ";
+        counter-increment: fieldsets;
+    }
+</style>
+</head>
+
+<body>
+<h3>Design Start</h3>
+<h3>Logo</h3>
+<h3>Content</h3>
+<h3>Images</h3>
+<h3>Graphs &amp; Graphics</h3>
+<h3>Features</h3>
+    <section>
+        <form id="freequote">
+            <fieldset>
+                <legend>Website Design</legend>
+                <ol>
+                    <li>
+                        <input type="radio" name="general" value="0">
+                        <label>I have an existing website (0 hours, $0)</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="general" value="8">
+                        <label>I have a website design or one I want to mimic (8 hours, $600)</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="general" value="0">
+                        <label>I want to choose from the following templates (0 hours) - dropdown if selected to reveal choices</label>
+                        <a href="http://webninjataylor.com/themes/wp/beat/full-width-portfolio/" target="_blank">Like this one...</a> <img src="../images/themes/beat_lg.jpg" alt="" style="width:100px;">
+                    </li>
+                    <li>
+                        <input type="radio" name="general" value="15">
+                        <label>I need a completely custom website design (15 hours)</label>
+                    </li>
+                    <li>...or choose from thousands of <a href="http://wordpress.org/extend/themes/" target="_blank">Free themes</a> and enter the name of the theme here <input type="text" name="theme"></li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Site Layout Design</legend>
+                <ol>
+                    <li>
+                        <input type="radio" name="design" value="0">
+                        <label>I do not need any unique graphics designed. (0 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="design" value="3">
+                        <label>I will supply images. (3 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="design" value="6">
+                        <label>I have a template but it needs minor customization. (6 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="design" value="10">
+                        <label>I need a template customized. (10 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="radio" name="design" value="20">
+                        <label>I would like a custom design created for my site. (20 Hours)</label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Other Graphic Features</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="graphic_features" value="4">
+                        <label>I need some custom graphics made. (4 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="graphic_features" value="4">
+                        <label>I need graphic mouse-over buttons. (4 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="graphic_features" value="4">
+                        <label>I need a few stock photographs integrated. (4 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="graphic_features" value="9">
+                        <label>I need several stock photographs integrated. (9 Hours)</label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Content</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="content" value="0">
+                        <label>I will add my content with a content manager (0 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="content" value="0">
+                        <label>I will supply <input type="text"> pages of typed content. (3 Hrs/Page)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="content" value="0">
+                        <label>I need <input type="text"> pages of copy written. (5 Hrs/Page)</label>
+                    </li>
+              </ol>
+Need copy, no outline<br>
+Need copy, outline<br>
+Libby write copy: provide outline = 1 hour<br>
+or she researches = 6 hours
+            </fieldset>
+            <fieldset>
+                <legend>Public Features / Available Customizations</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Member Registration (6 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Discussion Forums (5 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>RSS News Feeds (5 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Google Maps Integration (5 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Contact Form (3 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Links Page (3 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Site Search (4 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Email Auto-responders (2 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>File Uploads (8 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="public_features" value="0">
+                        <label>Google Adsense Integration (2 Hours)</label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>eCommerce</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="ecommerce" value="0">
+                        <label>Simple shopping cart (5 Hours)</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" name="ecommerce" value="0">
+                        <label>PayPal Processing (3 Hours)</label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Admin Features</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="admin_features" value="0">
+                        <label>Off the shelf site Blog (3 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="admin_features" value="0">
+                        <label>Custom Site Blog (6 Hours)</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" name="admin_features" value="0">
+                        <label>Photo Gallery (6 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="admin_features" value="0">
+                        <label>Member Administration (5 Hours)</label>
+                    </li>
+                    
+                    <li>
+                        <input type="checkbox" name="admin_features" value="0">
+                        <label>Traffic Statistic Reports (1 Hours) Google Analytics</label>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>SEO</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="seo" value="0">
+                        <label>MetaTag Keyword Optimization (5 Hours) INCLUDED</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="seo" value="0">
+                        <label>Search Engine Submission (3 Hours) Google sitemap?</label>
+                    </li>
+                    
+                    
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Social Media</legend>
+                <ol>
+                    <li>
+                        <input type="checkbox" name="social_media" value="0">
+                        <label>Twitter Integration (3 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="social_media" value="0">
+                        <label>Facebook Page (5 Hours)</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="social_media_fblike" value="0">
+                        <label>Facebook Like buttons</label>
+                    </li>
+                    
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Estimated total:</legend> $<span id="quote_total">0</span>.00
+            </fieldset>
+        </form>
+    </section>
+    <script src="../js/jquery-1.7.1.min.js"></script>
+    <script>
+        $('#freequote').change(function(){
+            var current_total = 0,
+                rate = 75;
+            $('input').each(function(item){
+                //if it's selected, get the value
+                if(this.checked){
+                    current_total += parseInt(this.value * rate);
+                }
+            });
+            $('#quote_total').text(current_total);
+        });
+    </script>
+</body>
+</html>
