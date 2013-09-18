@@ -8,6 +8,7 @@
             wnt.fillTable(ELEMENT,JSON) = Populate table with JSON data
             wnt.defaultContentLayer() = Show default content layer
             wnt.easyphone('#phone') = Make phone form field easy to populate
+            wnt.sortList['desc']($('.sortList')); = Sort list of items
     */
 
 // Create accessible namespace
@@ -224,6 +225,28 @@ var wnt = {};
                 $(this).val(currentValue+'-');
             }
         });
+    };
+    
+    /******** SORT LISTS ********/
+    /* USAGE EXAMPLE (pass asc or desc, and then the list object):
+        ...
+        wnt.sortList['desc']($('.sortList'));
+    */
+    wnt.sortList = {
+        asc: function(sList){
+            sListItems = $(sList).find('li');
+            sListItems = _.sortBy(sListItems, function(item){
+                return $(item).text();
+            });
+            $(sList).html(sListItems);
+        },
+        desc: function(sList){
+            sListItems = $(sList).find('li');
+            sListItems = _.sortBy(sListItems, function(item){
+                return $(item).text();
+            }).reverse();
+            $(sList).html(sListItems);
+        }
     };
 
 }());
