@@ -232,6 +232,7 @@ var wnt = {};
         ...
         wnt.sortList['desc']($('.sortList'));
     */
+    wnt.sortToggle = "asc";
     wnt.sortList = {
         asc: function(sList){
             sListItems = $(sList).find('li');
