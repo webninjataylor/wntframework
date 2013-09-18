@@ -236,3 +236,5 @@ if(wnt.currentPage.indexOf('index.php') !== -1) {
     wnt.defaultContentLayer();
 }
 */
+
+/* Testing direct edit in GitHub */
